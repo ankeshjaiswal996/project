@@ -3,54 +3,71 @@
 #include<stdio.h>
 #include<string.h>
 #include<sys/shm.h>
-static int consumed,produced;
-struct shmem_structure {
-int field1;
-int field2;
-};
-void *Producer(),*Consumer();
+int mutex=1;
+int full=0;
+int empty=3;
+int x=0;
 int main()
 {
-pthread_t t1,t2;
-pthread_create(t1,NULL,Producer,NULL);
-pthread_create(t2,NULL,Consumer,NULL);
-pthread_join(t1,NULL);
-pthread_join(t2,NULL);
+	int n;
+	void producerNext();
+	void consumerNext();
+	int wait(int);
+	int signal(int);
+	printf("\n1.Producer\n2.Consumer\n3.Exit");
+	while(1)
+	{
+		printf("\nEnter your choice to produce or consume item:");
+		scanf("%d",&n);
+		switch(n)
+		{
+			case 1:	if((mutex==1)&&(empty!=0))
+						producerNext();
+					else
+						printf("Buffer is full!!");
+					break;
+			case 2:	if((mutex==1)&&(full!=0))
+						consumerNext();
+					else
+						printf("Buffer is empty!!");
+					break;
+			case 3:
+					exit(0);
+					break;
+		}
+	}
+	
+	return 0;
 }
-void *Producer(){
-struct shmem_structure *shptr = get_shared_memory_structure();
-int produced = produceNext();
-printf("\nproducer produced : %d",produced);
-shptr->field1=produced;
-shptr->field2 = 1; //indicating ready
-while(shptr->field2 == 1);
+ 
+int wait(int s)
+{
+	return (--s);
 }
-void *Consumer(){
-struct shmem_structure *shptr = get_shared_memory_structure();
-while(shptr->field2 == 0); //do nothing
-consumed=shptr->field1;
-consumeNext(consumed);
-shptr->field2 = 0; //indicating done
+ 
+int signal(int s)
+{
+	return(++s);
 }
-int producedNext(){
-if(produced!=consumed){
-printf("\nError! Consumer did'nt consumed the value \n");
-consumeNext(consumed);
-}
-int i;
-while(i!=10){
-int x;
-x++;
-i++;
-return x;
-}
-}
-void consumeNext(int y){
-int z;
-int i;
-while(i!=10){
-z=y;
-printf("\nConsumer consumed : %d",z);
-}
-}
+ 
+void producerNext()
 
+{
+	mutex=wait(mutex);
+	full=signal(full);
+	empty=wait(empty);
+	x++;
+	printf("\nProducer produces the item %d",x);
+	mutex=signal(mutex);
+}
+ 
+void consumerNext()
+
+{
+	mutex=wait(mutex);
+	full=wait(full);
+	empty=signal(empty);
+	printf("\nConsumer consumes item %d",x);
+	x--;
+	mutex=signal(mutex);
+}
