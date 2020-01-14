@@ -1,0 +1,424 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int input()
+
+{
+
+    char style[100],pattern[100],ocassion,sizes,worth;
+    fflush(stdin);
+	printf("\n enter the dressing style of the customer:- casual or formal\n");
+	scanf("%s",&style);
+	fflush(stdin);
+	printf("\n enter the dressing pattern of the customer:- \n");
+	scanf("%s",&pattern);
+	printf("for which type of occassion you want to buy a clothes\n");
+	printf("w=wedding time , s=school , p=party time , c=college , n=normal \n  ");
+	scanf("%s",&ocassion);
+	switch(ocassion)
+	{
+		case 'w':{printf("size of the clothes :- S,M,L,XL,XXL\n");
+		            	            scanf("%s",&sizes);
+		            	            printf("how much do you want to worth or expend for it\n");
+		            	            scanf("%.3f",&worth);
+		            	            printf("\n \n \nAccording to that price i gave him/her suitable demand...\n\n");
+		            	            
+			break;
+		}
+		case 's':{printf("size of the clothes :- S,M,L,XL,XXL\n");
+		            	            scanf("%s",&sizes);
+		            	            printf("how much do you want to worth or expend for it\n");
+		            	            scanf("%.3f",&worth);
+		            	            printf("\n \n \n\nAccording to that price i gave him/her suitable demand...\n\n");
+		            	            
+			break;
+		}
+		case 'p':{printf("size of the clothes :- S,M,L,XL,XXL\n");
+		            	            scanf("%s",&sizes);
+		            	            printf("how much do you want to worth or expend for it\n");
+		            	            scanf("%.3f",&worth);
+		            	            printf("\n \n \n\nAccording to that price i gave him/her suitable demand...\n\n");
+		            	            
+			break;
+		}
+		case 'c':{printf("size of the clothes :- S,M,L,XL,XXL\n");
+		            	            scanf("%s",&sizes);
+		            	            printf("how much do you want to worth or expend for it\n");
+		            	            scanf("%.3f",&worth);
+		            	            printf("\n \n \n\nAccording to that price i gave him/her suitable demand...\n\n");
+		            	            
+		            	            
+			break;
+		}
+		case 'n':{printf("size of the clothes :- S,M,L,XL,XXL\n");
+		            	            scanf("%s",&sizes);
+		            	            printf("how much do you want to worth or expend for it\n");
+		            	            scanf("%.3f",&worth);
+		            	            printf("\n \n \n\nAccording to that price i gave him/her suitable demand...\n\n");
+		            	            
+			break;
+		}
+	}
+	
+}
+int main ()
+{
+	char name_of_the_customer[100],gender,choices,colors,patterns,stats,satisfied,less_satisfied,not_satisfied;
+	int age,customer;
+	float price,height;
+	printf("\n \t \t \t **********HELLO !! WELCOME TO SHOPPING ADVISOR:-(APNA ENTERPRISES)**********\n");
+	printf("\n Enter the name of customer: ");
+	gets(name_of_the_customer);
+	printf("\n Enter the gender of customer: ");
+	
+/*	'M' for male
+	'F' for female */
+	scanf("%s",&gender);
+	if(gender=='M'||gender=='m')
+	{
+	printf("\n 'K'- Kids(age 1-12), 'T'- Teenager(age 13-19), 'A'- Adult(age 20-40), 'S'- Seniors(age 41 and above)\n");
+	printf("Select your age group : ");
+	scanf("%s",&choices);
+	switch(choices)
+	{
+		case 'k': {
+		            printf("\n a - Top wear ");
+		            printf("\n b - Bottom wear  ");
+		            printf("\n c - Toys ");
+		            printf("\n d - Footwear ");
+		            printf("What do you wanna buy? : ");
+		            scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("Enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           write();
+		          break;
+		          }
+    	case 't': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear ");
+		            printf("\n b Bottom wear  ");
+		            printf("\n c sunglass and watches ");
+		            printf("\n d Footwear ");
+		           scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           input();
+		          break;
+		          }
+		case 'a': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear and bottom wear-formal(shirts,pants,tie and blazer) ");
+		            printf("\n b watches ");
+		            printf("\n c Footwear");
+		           scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	           scanf("%.3f",&price);
+		            	            
+							break;
+						}
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           input();
+		          break;
+		          }
+		case 's': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear ");
+		            printf("\n b Bottom wear  ");
+		            printf("\n c Desi look(dhoti,lungi and kurta) ");
+		            printf("\n d Footwear ");
+		           scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	             scanf("%.3f",&price);
+		            	            
+							break;
+						}
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           input();
+		          break;
+		          }
+	}
+    }
+		if(gender=='F'||gender=='f')
+	{
+	printf("asked the user what she want to bought for ownself... \n");
+		printf("\n 'k'- kids(1 to 12 age limit) & 'T'- teenager(13 to 19 age limit) & 'A'- adult(20 to 40 age limit) & 'S'- senior person(41 to till death age limit) \n");
+	scanf("%s",&choices);
+	switch(choices)
+	{
+		case 'k': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear ");
+		            printf("\n b Bottom wear  ");
+		            printf("\n c Toys ");
+		            printf("\n d Footwear ");
+		            scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	           scanf("%.3f",&price);
+		            	            
+							break;
+						}
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           input();
+		          break;
+		          }
+    	case 't': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear ");
+		            printf("\n b Bottom wear  ");
+		            printf("\n c sunglass and watches ");
+		            printf("\n d Footwear ");
+		           scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	             scanf("%.3f",&price);
+		            	            
+							break;
+						}
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           input();
+		          break;
+		          }
+		case 'a': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear and bottom wear-formal(shirts,pants,tie and blazer) ");
+		            printf("\n b sharee ");
+		            printf("\n c watches");
+		            printf("\n d Footwear");
+		           scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	             scanf("%.3f",&price);
+		            	            
+							break;
+						}
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+						}
+					}
+		           input();
+		          break;
+		          }
+		case 's': { printf("\n tell me which type of clothes do you want:- \n");
+		            printf("\n a Top wear ");
+		            printf("\n b Bottom wear  ");
+		            printf("\n c Footwear ");
+		           scanf("%s",&stats);
+		            switch(stats)
+		            {
+		            	case 'a': { printf("enter the colors of the clothes which customer want to decide to bought");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought");
+		            	             scanf("%.3f",&price);
+		            	            
+							break;
+				    }
+							case 'b': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+					}
+					case 'c': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+					}
+					case 'd': { printf("enter the colors of the clothes which customer want to decide to bought\n");
+		            	            scanf("%s",&colors);
+		            	            printf("ask to user what's the range of price of the clothes do you want to bought\n");
+		            	            scanf("%.3f",&price);
+		            	            
+							break;
+					}
+					}
+		           input();
+		           break;
+		            }
+	}
+    }
+    printf("\nI WANT SOME FAVOR FROM CUSTOMER..\n");
+    printf("THATS' THE FEEDBACK\n");
+    fflush(stdin);
+    scanf("%d",&customer);
+    if(customer==5)
+    printf("then he gives 5 out of 5-   \t\t  5/5\n");
+      if(customer==4)
+    printf("then he gives 4 out of 5-   \t\t  4/5\n");
+    if(customer==3)
+    printf("then he gives 3 out of 5-    \t\t  3/5");
+    if(customer==2)
+    printf("then he gives 2 out of 5-    \t\t  2/5");
+	 if(customer==1)
+    printf("then he gives 1 out of 5-    \t\t  1/5");
+    if(customer==0)
+    printf("he gives 0 out of 5-  \t\t 0/5");
+    printf("********************RECORD OF THE CUSTOMER SAVED SUCCESFULLY****************");
+    printf("	THANK YOU SO MUCH SIR/MAM...!!!! \n						** visit again to my shop!!!**    ");
+}
